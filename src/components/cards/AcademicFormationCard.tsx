@@ -1,5 +1,5 @@
 import type { IFormacionAcademica } from "../../Model/interfaces/IFormacion_Academica";
-import { ACGFormacionAcademicaEstile } from "./ACGesformacionacademicacards";
+import { ACGFormacionAcademicaEstile } from "./AcademicFormationCards";
 
 interface Props {
     formacionAcademica: IFormacionAcademica[]; 

@@ -1,5 +1,5 @@
 import type { IFormacion } from "../../Model/interfaces/IFormacion";
-import { ACGFormacionEstile } from "./ACGFormacionEstile";
+import { ACGFormacionEstile } from "./FormationStyle";
 
 interface Props {
     index: IFormacion[]; 

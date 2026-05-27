@@ -1,5 +1,5 @@
 import type { IServicio } from "../../Model/interfaces/IServicio";
-import { ACGServicioEstile } from "./ACGServicioEstile";
+import { ACGServicioEstile } from "./ServiceStyle";
 
 interface Props {
     index: IServicio[];

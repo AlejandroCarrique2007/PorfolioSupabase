@@ -1,5 +1,5 @@
 import type { IRedes } from "../../Model/interfaces/IRedes";
-import { ACGRedesEstile } from "./ACGRedesEstile";
+import { ACGRedesEstile } from "./NetworkStyle";
 
 interface Props {
     index: IRedes[]; 

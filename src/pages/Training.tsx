@@ -1,8 +1,12 @@
 import { useFormaciones } from '../hooks/useFormaciones';
-import { BookOpen, Zap, Award } from 'lucide-react';
+import { BookOpen, Zap, Award, CheckCircle2, Clock3, Layers } from 'lucide-react';
 
 export default function ACGFormacion() {
   const { formaciones, loading, error } = useFormaciones();
+  const totalCursos = formaciones.length;
+  const cursosCompletados = formaciones.filter((item) => item.estado === 'Completado').length;
+  const totalHoras = formaciones.reduce((sum, item) => sum + (item.horas || 0), 0);
+  const categoriasUnicas = new Set(formaciones.map((item) => item.categoria?.trim()).filter(Boolean)).size;
 
   return (
     <main className="bg-slate-50 min-h-screen py-12">
@@ -11,6 +15,44 @@ export default function ACGFormacion() {
           <p className="text-sm uppercase tracking-[0.28em] text-cyan-600">Formación</p>
           <h1 className="mt-4 text-4xl font-semibold text-slate-900">Temas estudiados</h1>
           <p className="mt-3 text-slate-600">Un resumen de los bloques y prácticas más importantes que he trabajado este curso.</p>
+        </div>
+
+        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4 mb-10">
+          <div className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm">
+            <div className="flex items-center gap-3 text-cyan-600">
+              <Layers size={22} />
+              <span className="text-sm uppercase tracking-[0.21em] text-slate-500">Cursos</span>
+            </div>
+            <p className="mt-4 text-3xl font-semibold text-slate-900">{loading ? '...' : totalCursos}</p>
+            <p className="mt-2 text-sm text-slate-500">Temas cargados desde Supabase</p>
+          </div>
+
+          <div className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm">
+            <div className="flex items-center gap-3 text-emerald-600">
+              <CheckCircle2 size={22} />
+              <span className="text-sm uppercase tracking-[0.21em] text-slate-500">Completados</span>
+            </div>
+            <p className="mt-4 text-3xl font-semibold text-slate-900">{loading ? '...' : cursosCompletados}</p>
+            <p className="mt-2 text-sm text-slate-500">Cursos marcados como completados</p>
+          </div>
+
+          <div className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm">
+            <div className="flex items-center gap-3 text-orange-600">
+              <Clock3 size={22} />
+              <span className="text-sm uppercase tracking-[0.21em] text-slate-500">Horas</span>
+            </div>
+            <p className="mt-4 text-3xl font-semibold text-slate-900">{loading ? '...' : totalHoras}</p>
+            <p className="mt-2 text-sm text-slate-500">Horas totales estimadas</p>
+          </div>
+
+          <div className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm">
+            <div className="flex items-center gap-3 text-blue-600">
+              <Award size={22} />
+              <span className="text-sm uppercase tracking-[0.21em] text-slate-500">Categorías</span>
+            </div>
+            <p className="mt-4 text-3xl font-semibold text-slate-900">{loading ? '...' : categoriasUnicas}</p>
+            <p className="mt-2 text-sm text-slate-500">Tipo de formación en el contenido</p>
+          </div>
         </div>
 
         {error && (

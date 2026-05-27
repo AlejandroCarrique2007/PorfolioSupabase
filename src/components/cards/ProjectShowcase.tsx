@@ -1,5 +1,5 @@
 import type { ITrabajo } from "../../Model/interfaces/ITrabajo";
-import { ACGTrabajoEstile } from "./ACGTrabajoEstile";
+import { ACGTrabajoEstile } from "./ProjectStyle";
 
 interface Props {
   index: ITrabajo[];

@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import Header1 from "../main/ACGheader";
+import Header1 from "../main/Header";
 
 export const MainLayout = () => {
   return (
