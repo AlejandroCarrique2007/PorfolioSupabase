@@ -58,7 +58,7 @@ function App() {
 
         <section id="contacto" className="card">
           <h3>Contacto</h3>
-          <p>Email: alexasir@example.com</p>
+          <p>Email: alejandrocarrique029@gmail.com</p>
           <p>GitHub: github.com/alexcg</p>
         </section>
       </main>

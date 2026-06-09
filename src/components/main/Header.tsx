@@ -6,6 +6,7 @@ const navigation = [
   { name: 'Habilidades', href: '/habilidades' },
   { name: 'Formación', href: '/formacion' },
   { name: 'Contacto', href: '/contacto' },
+  { name: 'Admin', href: '/admin' },
 ]
 
 function Header1() {

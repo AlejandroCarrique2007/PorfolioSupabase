@@ -1,15 +1,22 @@
-import { supabase } from "../../utils/supabase";
-import type { IFormacion } from "../../interfaces/IFormacion";
+import { supabase } from '../../utils/supabase';
+import type { IFormacionRegistro } from '../../interfaces/IFormacionRegistro';
 
-export const getFormacion = async (): Promise<IFormacion[]> => {
-    const { data, error } = await supabase
-        .from('Formacion')
-        .select('*');
+export type NewFormacionPayload = Omit<IFormacionRegistro, 'id' | 'created_at' | 'updated_at'>;
 
-    if (error) {
-        console.error('Error al obtener formación:', error.message);
-        return [];
-    }
+export const getFormacion = async (): Promise<IFormacionRegistro[]> => {
+  const { data, error } = await supabase
+    .from('formaciones')
+    .select('*')
+    .order('created_at', { ascending: false });
 
-    return data || [];
+  if (error) {
+    console.error('Error al obtener formación:', error.message);
+    return [];
+  }
+
+  return data || [];
+};
+
+export const insertFormacion = async (payload: NewFormacionPayload) => {
+  return await supabase.from('formaciones').insert([payload]);
 };
