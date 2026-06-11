@@ -60,6 +60,17 @@ const Contacto = () => {
               })
             )}
           </div>
+
+          <div className="mt-10">
+            <div className="overflow-hidden rounded-[28px] border border-slate-200">
+              <iframe
+                title="Mapa de Albox"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-2.424%2C37.248%2C-2.338%2C37.324&layer=mapnik&marker=37.289%2C-2.382"
+                className="h-[420px] w-full"
+                loading="lazy"
+              />
+            </div>
+          </div>
         </div>
       </section>
     </main>

@@ -33,7 +33,7 @@ export const ACGServicioDetalle = () => {
           <p className="text-lg font-semibold">Servicio no encontrado</p>
           <p className="mt-3 text-slate-600">El identificador no coincide con un proyecto guardado.</p>
           <Link to="/habilidades" className="mt-8 inline-flex rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800">
-            Volver a habilidades
+            Volver a servicios
           </Link>
         </div>
       </main>
@@ -44,7 +44,7 @@ export const ACGServicioDetalle = () => {
     <main className="min-h-screen bg-slate-50 py-24 text-slate-900">
       <div className="mx-auto max-w-5xl px-6">
         <Link to="/habilidades" className="inline-flex items-center gap-2 text-sm font-medium text-slate-600 transition hover:text-slate-900">
-          <ArrowLeft size={18} /> Volver a habilidades
+          <ArrowLeft size={18} /> Volver a servicios
         </Link>
 
         <article className="mt-8 rounded-[32px] border border-slate-200 bg-white p-10 shadow-lg shadow-slate-200/50">

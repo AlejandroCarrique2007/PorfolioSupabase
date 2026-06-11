@@ -24,15 +24,28 @@ export function useFormaciones() {
     const fetchFormaciones = async () => {
       try {
         setLoading(true);
-        const { data, error: supabaseError } = await supabase
+        const { data: formacionData, error: formacionError } = await supabase
           .from('formaciones')
           .select('*')
           .order('created_at', { ascending: false });
 
-        if (supabaseError) {
-          setError(supabaseError.message);
+        const combined: Formacion[] = [];
+
+        if (!formacionError && formacionData) {
+          combined.push(...formacionData);
+        }
+
+        if (combined.length === 0) {
+          if (formacionError) {
+            setError(formacionError.message);
+          } else {
+            setFormaciones([]);
+          }
         } else {
-          setFormaciones(data || []);
+          const sorted = combined.sort(
+            (a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
+          );
+          setFormaciones(sorted);
         }
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Error desconocido');

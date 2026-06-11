@@ -18,5 +18,17 @@ export const getFormacion = async (): Promise<IFormacionRegistro[]> => {
 };
 
 export const insertFormacion = async (payload: NewFormacionPayload) => {
-  return await supabase.from('formaciones').insert([payload]);
+  return await supabase.from('formaciones').insert([payload]).select();
+};
+
+export const updateFormacion = async (id: number, payload: NewFormacionPayload) => {
+  return await supabase
+    .from('formaciones')
+    .update(payload)
+    .eq('id', id)
+    .select();
+};
+
+export const deleteFormacion = async (id: number) => {
+  return await supabase.from('formaciones').delete().eq('id', id);
 };

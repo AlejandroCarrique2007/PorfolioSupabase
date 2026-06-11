@@ -1,14 +1,12 @@
 import { NavLink, Outlet } from 'react-router-dom';
-import { BookOpen, Briefcase, LayoutGrid, Users, Home, ClipboardList } from 'lucide-react';
+import { BookOpen, Briefcase, LayoutGrid, Home, ClipboardList } from 'lucide-react';
 
 const navItems = [
   { name: 'Portfolio Personal', path: '/admin', icon: Home },
-  { name: 'Cursos', path: '/admin/cursos', icon: BookOpen },
   { name: 'Distribuidores', path: '/admin/distribuidores', icon: ClipboardList },
   { name: 'Formación', path: '/admin/formacion', icon: BookOpen },
   { name: 'Servicios', path: '/admin/servicios', icon: Briefcase },
   { name: 'Trabajos', path: '/admin/trabajos', icon: LayoutGrid },
-  { name: 'Clientes', path: '/admin/clientes', icon: Users },
 ];
 
 export const AdminLayout = () => {

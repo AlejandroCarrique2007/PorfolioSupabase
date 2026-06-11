@@ -13,3 +13,18 @@ export const getTrabajos = async (): Promise<ITrabajo[]> => {
 
     return data || [];
 };
+
+export const updateTrabajo = async (id: number, payload: Partial<ITrabajo>) => {
+    return await supabase
+        .from('Trabajos')
+        .update(payload)
+        .eq('id', id)
+        .select();
+};
+
+export const deleteTrabajo = async (id: number) => {
+    return await supabase
+        .from('Trabajos')
+        .delete()
+        .eq('id', id);
+};

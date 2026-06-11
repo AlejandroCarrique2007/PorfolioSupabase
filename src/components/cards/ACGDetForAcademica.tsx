@@ -75,8 +75,6 @@ export const ACGFormacionAcademicaDetalleCard = ({ item }: Props) => {
                         <div className="h-1.5 w-1.5 bg-green-500 rounded-full animate-pulse" />
                         <span>Estatus: {item.fecha_fin === 'Actualidad' ? 'En Curso' : 'Completado'}</span>
                     </div>
-                    <span>© 2026 J.L. López · Registro Académico</span>
-                    <span>Validación de Sistemas</span>
                 </footer>
             </div>
         </div>

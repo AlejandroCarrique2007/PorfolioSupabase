@@ -8,26 +8,26 @@ const ACGTrabajosPage = () => {
     <main className="bg-slate-50 min-h-screen py-12">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-10 rounded-[32px] border border-slate-200 bg-white p-10 shadow-lg shadow-slate-200/50">
-          <p className="text-sm uppercase tracking-[0.28em] text-cyan-600">Proyectos</p>
+          <p className="text-sm uppercase tracking-[0.28em] text-cyan-600">Trabajos</p>
           <h1 className="mt-4 text-4xl font-semibold text-slate-900">Trabajos prácticos</h1>
           <p className="mt-3 text-slate-600">Equipos, redes y administración: ejemplos reales que muestran mi primer año en ASIR.</p>
         </div>
 
         {error && (
           <div className="flex flex-col items-center justify-center gap-4 rounded-[28px] border border-red-200 bg-red-50 py-12 px-8 mb-6">
-            <p className="text-lg font-medium text-red-700">Error al cargar los proyectos</p>
+            <p className="text-lg font-medium text-red-700">Error al cargar los trabajos</p>
             <p className="text-center text-red-600">{error}</p>
           </div>
         )}
 
         {loading ? (
           <div className="flex flex-col items-center justify-center gap-6 rounded-[28px] border border-slate-200 bg-slate-50 py-16 px-8">
-            <p className="text-lg font-medium text-slate-500">Cargando proyectos...</p>
+            <p className="text-lg font-medium text-slate-500">Cargando trabajos...</p>
           </div>
         ) : trabajos.length === 0 ? (
           <div className="flex flex-col items-center justify-center gap-6 rounded-[28px] border border-slate-200 bg-slate-50 py-16 px-8">
             <p className="text-lg font-medium text-slate-500">Próximamente</p>
-            <p className="text-center text-slate-600">Los proyectos se añadirán conforme avances en el ciclo</p>
+            <p className="text-center text-slate-600">Los trabajos se añadirán conforme avances en el ciclo</p>
           </div>
         ) : (
           <div className="space-y-6">

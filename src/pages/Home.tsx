@@ -16,7 +16,7 @@ export const Home = () => {
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
               <a href="/proyectos" className="inline-flex items-center justify-center rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800">
-                Ver proyectos
+                Ver trabajos
                 <ArrowRight className="ml-3 h-4 w-4" />
               </a>
               <a href="/contacto" className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-900 transition hover:border-slate-400 hover:bg-slate-100">

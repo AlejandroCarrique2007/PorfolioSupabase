@@ -13,7 +13,7 @@ function App() {
         <nav>
           <a href="#inicio">Inicio</a>
           <a href="#sobre-mi">Sobre mí</a>
-          <a href="#proyectos">Proyectos</a>
+          <a href="#proyectos">Trabajos</a>
           <a href="#contacto">Contacto</a>
         </nav>
       </aside>
@@ -36,7 +36,7 @@ function App() {
         </section>
 
         <section id="proyectos" className="card">
-          <h3>Proyectos</h3>
+          <h3>Trabajos</h3>
 
           <div className="projects">
             <div className="project">

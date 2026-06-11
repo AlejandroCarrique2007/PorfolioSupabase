@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom'
 
 const navigation = [
   { name: 'Inicio', href: '/' },
-  { name: 'Proyectos', href: '/proyectos' },
-  { name: 'Habilidades', href: '/habilidades' },
+  { name: 'Trabajos', href: '/proyectos' },
+  { name: 'Servicios', href: '/habilidades' },
   { name: 'Formación', href: '/formacion' },
   { name: 'Contacto', href: '/contacto' },
   { name: 'Admin', href: '/admin' },
